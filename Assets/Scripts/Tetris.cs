@@ -127,6 +127,7 @@ public class Tetris : MonoBehaviour
 				int fliped = UnityEngine.Random.Range(0, 2);
 				if (fliped == 1) sigFlip = true;
 			}
+			else sigFlip = false;
 		}
 		
 		

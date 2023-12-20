@@ -62,7 +62,7 @@ public class PiezaTetris : MonoBehaviour
 	bool flip = false;
 
 	TipoPieza sigPieza;
-	bool sigFlip;
+	bool sigFlip = false;
 
 	private Coroutine bajarAuto;
 
@@ -71,8 +71,8 @@ public class PiezaTetris : MonoBehaviour
 		tetris = Tetris.instance;
 		tipoPieza = Tetris.instance.piezaAct;
 		sigPieza = Tetris.instance.sigPieza;
-		if (tipoPieza == TipoPieza.PiezaL || tipoPieza == TipoPieza.PiezaS) flip = Tetris.instance.flip;
-		if (sigPieza == TipoPieza.PiezaL || sigPieza == TipoPieza.PiezaS) sigFlip = Tetris.instance.sigFlip;
+		flip = Tetris.instance.flip;
+		sigFlip = Tetris.instance.sigFlip;
 
 		CrearPieza();
 		GenerarPreview();
