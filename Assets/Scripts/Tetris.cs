@@ -41,6 +41,8 @@ public class Tetris : MonoBehaviour
 	private GameObject sonidoLinea;
 	[SerializeField]
 	private GameObject sonidoFin;
+	[SerializeField]
+	private GameObject sonidoMelodia;
 
 	private void Awake()
 	{
@@ -226,6 +228,7 @@ public class Tetris : MonoBehaviour
 	public void JuegoFinalizado()
 	{
 		sonidoFin.GetComponent<AudioSource>().Play();
+		sonidoMelodia.GetComponent<AudioSource>().Stop();
 		FinalizaJuego?.Invoke(puntuacion);
 	}
 	public void ReproducirRotar()
